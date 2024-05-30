@@ -1,0 +1,176 @@
+.details-container {
+  padding-top: 150px;
+}
+
+.details-container .details-wrapper {
+  display: grid;
+  grid-template-columns: 60% auto;
+  height: 541px;
+  padding: 0 120px;
+  gap: 40px;
+}
+
+.details-container .details-wrapper .details-wrapper-img {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: inherit;
+  position: relative;
+}
+
+.attributes-nested {
+  display: flex;
+  gap: 5px;
+}
+
+.details-wrapper-description .atr-size .attributes-items {
+  width: 63px;
+  height: 45px;
+  border: 1px solid var(--gray);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  cursor: pointer;
+  font-family: Source Sans Pro;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0.05em;
+  text-align: center;
+}
+
+.details-wrapper-description .atr-size .attributes-items.color-box {
+  width: 36px !important;
+  height: 36px;
+  border: 1px solid #d3d2d5;
+}
+div#\ attributes\ out {
+  opacity: 0.5;
+  pointer-events: none;
+}
+div#\ \ \ \ \ attributes\ out {
+  pointer-events: none;
+}
+
+div#active\ \ \ attributes\ in {
+  transform: scale(1.1);
+  background: var(--black);
+  color: var(--white);
+  border: 1px solid var(--green);
+}
+.details-wrapper-description .atr-size .atr-name {
+  font-family: "Roboto Mono", monospace;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 18px;
+}
+
+.details-wrapper-description .atr-size .attributes-items span {
+  font-family: "Source Sans 3", sans-serif;
+}
+
+.details-wrapper-description {
+  display: flex;
+  margin: auto 0;
+  line-height: 30px;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: calc(100% - 108px);
+  row-gap: 20px;
+}
+
+.details-wrapper-description h2 {
+  font-family: "Raleway", sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 27px;
+}
+
+.details-container .item-price {
+  font-family: "Raleway", sans-serif;
+  display: inline-flex;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 18px;
+}
+
+.details-container .details-wrapper-price {
+  font-family: "Roboto Mono", monospace;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 18px;
+}
+
+.details-wrapper-description #description {
+  font-family: "Roboto Mono", monospace;
+  font-weight: 400;
+  text-align: left;
+  color: var(--gray);
+  line-height: 25.59px;
+  overflow-y: scroll;
+  height: 200px;
+}
+
+.details-wrapper-description #description * {
+  font-size: 16px !important;
+}
+
+.details-wrapper-description #description .show-les-button {
+  cursor: pointer;
+  text-decoration: underline;
+  color: #7d7c7c;
+}
+
+.details-container .atr-size .attributes-items.color-box.active {
+  border: 2px solid red;
+}
+@media (max-width: 700px) {
+  .details-container .details-wrapper {
+    padding: 0;
+    display: block;
+  }
+
+  .details-container .details-wrapper .details-wrapper-img {
+    justify-content: center;
+  }
+
+  .details-wrapper-description {
+    text-align: center;
+    margin-top: 20px;
+    justify-content: center;
+    width: calc(100% - 150px);
+    margin: auto;
+    padding-bottom: 28px;
+  }
+
+  .attributes-nested {
+    justify-content: center;
+  }
+
+  .details-wrapper-description h2 {
+    font-size: 20px;
+  }
+
+  .atr-size .atr-name {
+    font-size: 14px;
+  }
+
+  .atr-size .attributes-items {
+    width: 33px;
+    height: 25px;
+    font-size: 12px;
+  }
+
+  .details-container .item-price {
+    justify-content: center;
+  }
+
+  .details-wrapper-description .atr-size .attributes-items.color-box {
+    width: 23px !important;
+    height: 23px;
+  }
+}
+.details-wrapper-description #description::-webkit-scrollbar {
+  width: 3px !important;
+}

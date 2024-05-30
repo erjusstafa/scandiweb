@@ -1,0 +1,8 @@
+.card-img.out-stock {
+  filter: opacity(0.3);
+  pointer-events: none;
+ /*  width: 354px;
+  height: 330px; */
+  object-fit: cover;
+  width: 100%;
+}

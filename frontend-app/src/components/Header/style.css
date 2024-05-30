@@ -1,0 +1,174 @@
+.Navbar {
+  color: var(--black);
+  height: 80px;
+  display: grid;
+  grid-template-columns: auto 40% 15%;
+  align-items: center;
+  position: fixed;
+  width: 100vw;
+  background: var(--white);
+  z-index: 7;
+  padding: 0 120px;
+}
+
+.Navbar > .nav-items {
+  list-style-type: none;
+  display: flex;
+  height: inherit;
+  gap: 30px;
+}
+
+.Navbar ul .li {
+  display: inherit;
+  align-items: center;
+  cursor: pointer;
+  height: inherit;
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: none;
+  color: var(--black);
+}
+
+.Navbar > .nav-items > .li.active {
+  border-bottom: 2px solid var(--green);
+  color: var(--green);
+}
+
+.Navbar > .nav-basket {
+  display: inherit;
+  width: 100%;
+  cursor: pointer;
+  z-index: 99;
+  position: relative;
+  place-content: end;
+}
+
+.Navbar > .nav-basket > span {
+  width: 25px;
+  height: 25px;
+  background-color: var(--black);
+  color: var(--white);
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+  position: absolute;
+  right: 0;
+  top: -6px;
+}
+
+.Navbar > .nav-basket .basket-icon {
+  position: relative;
+  right: 20px;
+  font-size: 25px;
+  color: var(--disabled-color);
+}
+
+.Navbar > .nav-items > a:hover::before {
+  width: 100%;
+}
+
+.Navbar > .nav-toggle {
+  display: none;
+}
+
+@media screen and (max-width: 700px) {
+  .Navbar {
+    grid-template-columns: 10% 80% 10%;
+    padding: 0 10px;
+  }
+  .Navbar > .nav-items {
+    position: absolute;
+    top: 67px;
+    display: flex;
+    flex-direction: column;
+    background: var(--green);
+    left: 0px;
+    width: 100%;
+    min-height: 200px;
+    transform: translateX(-100%);
+    transition: all 0.45s;
+    color: var(--white);
+    line-height: 40px;
+    justify-content: center;
+    height: auto;
+  }
+  .Navbar > .nav-items > .li {
+    position: relative;
+    left: 23px;
+  }
+
+  .Navbar > .nav-items > .li::before {
+    background: transparent;
+  }
+  .nav-logo {
+    margin: auto;
+  }
+  .Navbar > .nav-items > .li.active {
+    border-bottom: none;
+    color: var(--laila);
+  }
+
+  .Navbar > .nav-items.open {
+    transform: translateX(0);
+  }
+  .Navbar > .nav-items.open a {
+    color: var(--white);
+  }
+
+  .Navbar > .nav-toggle {
+    display: flex;
+    height: 50px;
+    align-items: center;
+    justify-content: start;
+    cursor: pointer;
+  }
+
+  .nav-toggle > .bar {
+    position: relative;
+    width: 25px;
+    height: 2px;
+    background: var(--laila);
+    transition: all 0.45s ease-in-out;
+  }
+
+  .nav-toggle > .bar::before,
+  .nav-toggle > .bar::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    background: var(--green);
+    border-radius: 2px;
+    transition: all 0.45s ease-in-out;
+  }
+
+  .nav-toggle > .bar::before {
+    width: 32px;
+    transform: translateY(-8px);
+  }
+
+  .nav-toggle > .bar::after {
+    width: 32px;
+    transform: translateY(8px);
+  }
+
+  .nav-toggle.open > .bar {
+    transform: translateX(-40px);
+    background: transparent;
+  }
+
+  .nav-toggle.open > .bar::before {
+    width: 32px;
+    transform: rotate(45deg) translate(26px, -26px);
+  }
+
+  .nav-toggle.open > .bar::after {
+    transform: rotate(-45deg) translate(26px, 26px);
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .Navbar .nav-logo {
+    margin: auto;
+  }
+}

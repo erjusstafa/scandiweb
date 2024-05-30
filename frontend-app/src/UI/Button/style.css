@@ -1,0 +1,79 @@
+.add-button {
+  padding: 10px;
+  border: 1px solid var(--black);
+  display: grid;
+  place-content: center;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.carousel-button-left,
+.carousel-button-right {
+  border: 1px solid var(--black);
+  color: var(--black);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.carousel-button-left:hover,
+.carousel-button-right:hover{
+  color: var(--white);
+  background-color: var(--black);
+}
+.place-order,
+.add-to-cart {
+  background: var(--green);
+  color: var(--white);
+  text-align: center;
+  cursor: pointer;
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 12px 0;
+}
+
+.place-order-disabled {
+  pointer-events: none;
+  background-color: var(--disabled-bg);
+  color: var(--disabled-color);
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 12px 0;
+}
+
+.search-button {
+  border: 1px solid var(--green);
+  background-color: var(--white);
+  color: var(--laila);
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 7px;
+  font-family: "Raleway", sans-serif;
+
+}
+
+.search-button:hover {
+  background-color: var(--green);
+  color: var(--white);
+  transition: 0.2s ease-in-out;
+}
+
+@media (max-width: 700px) {
+  .carousel-button-left,
+  .carousel-button-right {
+    width: 22px !important;
+    height: 22px !important;
+    font-size: 10px;
+  }
+
+  .add-to-cart {
+    font-size: 12px;
+  }
+
+  .search-button {
+    font-size: 12px;
+  }
+}

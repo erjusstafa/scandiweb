@@ -1,0 +1,130 @@
+.wraper-quickshop {
+  max-height: 450px;
+  width: 325px;
+  padding: 32px 16px;
+  background-color: var(--white);
+  opacity: 1 !important;
+  position: absolute;
+  right: 60px;
+  top: 0;
+  z-index: 999;
+  font-family: "Raleway", sans-serif;
+  overflow-y: auto;
+}
+
+.modal-container.open {
+  position: fixed;
+  height: auto;
+  width: auto;
+  background: #39374838;
+  z-index: 9;
+  left: 0;
+  right: 0;
+  top: 78px;
+  bottom: 0;
+}
+
+.wraper-quickshop .wraper-title {
+  display: inline-flex;
+  font-weight: 700;
+}
+
+.wraper-quickshop .wraper-title p {
+  font-weight: 300;
+}
+
+.wraper-quickshop .item-added {
+  display: grid;
+  grid-template-columns: 50% auto 40%;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px 0;
+}
+
+.wraper-quickshop .wrapper-item,
+.wraper-quickshop .item-added .quickshop-button {
+  text-align: center;
+  height: -webkit-fill-available;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.wraper-quickshop .wrapper-item {
+  text-align: unset;
+  line-height: 30px;
+}
+.wraper-quickshop .item-price {
+  font-weight: 500;
+  font-size: 18px;
+  font-family: "Raleway", sans-serif;
+  display: inline-flex;
+}
+
+.wraper-quickshop .atr-size .attributes-nested {
+  display: flex;
+  gap: 5px;
+}
+
+.wraper-quickshop .atr-size .attributes-items {
+  width: 25px;
+  height: 25px;
+  border: 1px solid rgb(138, 138, 138);
+  font-size: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  cursor: pointer;
+ 
+}
+
+.wraper-quickshop .atr-size .attributes-items span {
+  font-weight: 600;
+}
+
+.wraper-quickshop .atr-size .attributes-items.color-box {
+  width: 15px;
+  height: 15px;
+ }
+.add-to-cart.out {
+  pointer-events: none;
+  background-color: var(--disabled-bg);
+  color: var(--disabled-color);
+}
+.wrapper-item .atr-size .atr-name {
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  text-align: left;
+}
+.wraper-quickshop .total {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 70px;
+}
+
+.wraper-quickshop .item-added .item-image img {
+  object-fit: contain;
+}
+
+.wraper-quickshop::-webkit-scrollbar {
+  width: 3px !important;
+}
+
+@media screen and (max-width: 700px) {
+  .wraper-quickshop {
+    width: 280px;
+    right: 16px;
+  }
+
+  .modal-container.open {
+    top: 67px;
+  }
+  .wraper-quickshop .atr-size .attributes-nested {
+    justify-content: start;
+  }
+}
